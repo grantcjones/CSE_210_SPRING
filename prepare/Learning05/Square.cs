@@ -3,7 +3,8 @@ using static System.Console;
 public class Square : Shape {
     private double _side;
 
-    public Square(int side) {
+    public Square(string color, int side) 
+        : base(color) {
         _side = side;
     }
 
