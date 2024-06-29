@@ -34,9 +34,6 @@ class Program
                     string title = parts[1].Trim();
                     int points = int.Parse(parts[2].Trim());
 
-                    // if (type == "Score") {
-                    //     score = int.Parse(parts[2].Trim());
-                    // }    
                     if (type == "Repeated" && parts.Length == 5)
                     {
                         int completions = int.Parse(parts[3].Trim());
@@ -47,7 +44,6 @@ class Program
                     }
                     else if (type == "Eternal" && parts.Length == 3)
                     {
-                        // int completions = int.Parse(parts[3].Trim());
                         eternals.Add(new Eternal(points, title));
                     }
                     else if (type == "Simple" && parts.Length == 4)
@@ -178,11 +174,6 @@ class Program
                             WriteLine("");
                             Write("Select goal completed: ");
                             string selectSimpleStr = ReadLine();
-
-                            // if (selectSimpleStr == "cancel") {
-                            //     WriteLine("");
-                            //     break;
-                            // }
 
                             if (int.TryParse(selectSimpleStr, out int selectedSimple) && selectedSimple >= 1 && selectedSimple <= simples.Count)
                             {
